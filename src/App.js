@@ -10,7 +10,6 @@ function App() {
   return (
     <FormDataProvider>
       {" "}
-      {/* Wrap your routes with FormDataProvider */}
       <Router>
         <Routes>
           <Route path="/" element={<InventoryPage />} />

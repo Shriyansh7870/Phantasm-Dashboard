@@ -210,7 +210,14 @@ const InventoryTable = ({ products }) => {
                   className="w-10 h-10 object-contain"
                 />
               </Link>
-              <td className="p-3 text-[#6E7079]">{product.product}</td>
+              <td className="p-3 text-[#6E7079]">
+                <Link
+                  to={"/productDetails"}
+                  className="text-[#6E7079]"
+                >
+                  {product.product}
+                </Link>
+              </td>
               <td className="p-3 text-[#6E7079]">{product.category}</td>
               <td className="p-3 text-[#6E7079]">{product.price}</td>
               <td className="p-3 text-[#6E7079]">{product.stock}</td>

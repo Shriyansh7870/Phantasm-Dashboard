@@ -6,7 +6,6 @@ import { FiEyeOff } from "react-icons/fi";
 import { BsEye } from "react-icons/bs";
 
 const FormComponent = () => {
-  // Form states
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
@@ -16,17 +15,13 @@ const FormComponent = () => {
     mobileNumber: "",
     verificationCode: "",
   });
-
-  // View states
   const [isLogin, setIsLogin] = useState(false);
   const [showVerification, setShowVerification] = useState(false);
   const [showPassword, setShowPassword] = useState(false);
-  // Add error state
   const [error, setError] = useState("");
 
   const handleInputChange = (field, value) => {
     setFormData((prev) => ({ ...prev, [field]: value }));
-    // Clear any previous errors when user starts typing
     setError("");
   };
 
@@ -39,9 +34,7 @@ const FormComponent = () => {
   };
 
   const handleVerificationSubmit = () => {
-    // Add your verification logic here
     if (formData.verificationCode) {
-      // Simulate API call verification
       console.log("Verifying code:", formData.verificationCode);
     } else {
       setError("Please enter the verification code");
@@ -55,7 +48,7 @@ const FormComponent = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    setError(""); // Clear any previous errors
+    setError(""); 
 
     if (isLogin) {
       if (showVerification) {
@@ -64,7 +57,6 @@ const FormComponent = () => {
         handleLogin();
       }
     } else {
-      // Signup validation
       if (formData.password !== formData.confirmPassword) {
         setError("Passwords do not match");
         return;
@@ -74,9 +66,7 @@ const FormComponent = () => {
         return;
       }
       console.log("Signup data:", formData);
-      // Add signup API call logic here
-      // After successful signup, you might want to:
-      // router.push('/home');
+      
     }
   };
 

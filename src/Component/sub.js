@@ -14,7 +14,7 @@ const Sub = () => {
     <div>
       {location.pathname === "/" && (
         <div className="flex flex-col sm:flex-row justify-between items-center p-4">
-          <h2 className="lg:text-lg text-2xl font-bold text-[#45464E] mb-4 sm:mb-0">
+          <h2 className=" text-2xl font-bold text-[#45464E] mb-4 sm:mb-0">
             Inventory Summary
           </h2>
           <button

@@ -40,7 +40,7 @@ const Header = () => {
           </div>
         </header>
       </div>
-      <div className="mt-14 lg:mt-6">
+      <div className="mt-14 lg:mt-2">
         <Sub />
       </div>
     </>
